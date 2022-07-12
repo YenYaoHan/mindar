@@ -7,9 +7,20 @@
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets2.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        
+
+        <a-assets>
+            <video id="penguin-sledding" autoplay loop="true" src="./CPBG-Video.mp4"></video>
+        </a-assets>
+
+
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
         <a-entity position="0 0 0" rotation="90 0 0" scale="1 1 1" gltf-model="assets/robot.gltf"> </a-entity>
+
+        <a-video position="0 0 0" src="#penguin-sledding" width="2" height="1.2" shadow></a-video>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" shadow></a-plane>
+
       </a-entity>
     </a-scene>
   </body>
